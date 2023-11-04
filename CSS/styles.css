@@ -45,7 +45,6 @@ body {
     border-radius: .5rem;
     width: 90%;
     text-align: center;
-    border: none;
 }
 @media (min-width: 768px) {
     .boton {
@@ -98,48 +97,6 @@ body {
   }
 
 /* cierre de boton*/
-
-/*efecto navegacion*/
-
-/*inicio boton*/
-.ov-btn-slide-close-nav {
-    background: var(--secundario); /* color de fondo */
-    color: var(--secundario); /* color de fuente */
-    border: 2px solid var(--secundario); /* tamaño y color de borde */
-    padding: 16px 20px;
-    border-radius: 6px; /* redondear bordes */
-    position: relative;
-    z-index: 1;
-    overflow: hidden;
-    display: inline-block;
-  }
-  .ov-btn-slide-close-nav:before, .ov-btn-slide-close:after {
-    content: "";
-    z-index: -1;
-    position: absolute;
-    width: 50%;
-    height: 100%;
-    top: 0;
-    left: -50%;
-    background-color:var(--secundario); /* color de fondo hover */
-    -webkit-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
-  }
-  .ov-btn-slide-close-nav:after {
-    left: 100%;
-  }
-  .ov-btn-slide-close-nav:hover {
-    color: #fff; /* color de fuente hover */
-  }
-  .ov-btn-slide-close-nav:hover:before {
-    left: 0;
-  }
-  .ov-btn-slide-close-nav:hover:after {
-    left: 50%;
-  }
-
-/*cierre boton*/
 
 .sombra {
     box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
@@ -214,12 +171,13 @@ h1,h2,h3 {
     padding: 1.1rem;
     
 }
-/*
 .navegacion-principal a:hover {
     background-color: var(--primario);
     color: var(--oscuro);
-    text-shadow: 0px 0px 5px var(--blanco);
-}*/
+    border-radius: 0.5rem;
+    text-shadow: 1px 1px 5px var(--blanco);
+    box-shadow: 0px 0px 3px var(--blanco);
+}
 
 /* Hero */
 .hero {
