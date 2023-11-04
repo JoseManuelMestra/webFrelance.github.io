@@ -269,6 +269,10 @@ h1,h2,h3 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-shadow: 1px 16px 17px -10px rgba(0,0,0,0.77);
+    -webkit-box-shadow: 1px 16px 17px -10px rgba(0,0,0,0.77);
+    -moz-box-shadow: 1px 16px 17px -10px rgba(0,0,0,0.77);
+    margin-bottom: 3rem;
 }
 .servicio h3 {
     color: var(--primario);
