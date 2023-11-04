@@ -187,7 +187,15 @@ h1,h2,h3 {
     height: 450px;
     position: relative;
     margin-bottom: 2rem;
-    
+}
+.hero-sobreMi{
+    background-image: url(/img/sobreMi-hero.jpg);
+}
+.hero-index{
+    background-image: url(/img/diseño-web-hero.jpg);
+}
+.hero-clientes{
+    background-image: url(/img/clientes-hero.jpg);
 }
 .contenido-hero {
     position: absolute;
