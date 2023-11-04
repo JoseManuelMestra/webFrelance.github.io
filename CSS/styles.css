@@ -1,24 +1,25 @@
 :root {
     --blanco: #ffffff;
-    --oscuro: #212121;
-    --primario: #FFC107;
-    --secundario: #0097A7;
-    --gris: #757575;
-    --grisClaro: #DFE9F3;
+    --oscuro: #0A100D;
+    --primario: #6AD424;
+    --secundario:#294fd6;
+    --gris: #BFBDC1;
+    --grisClaro: #DFDFDF;
 }
 /*  Globales **/
 html {
     font-size: 62.5%;
     box-sizing: border-box; /* Hack para Box Model **/
-    scroll-snap-type: y mandatory;
+    /*scroll-snap-type: y mandatory;*/
 }
-/** Scroll Snap**/
+/*Scroll Snap*/
+/*
 .servicios,
 .navegacion-principal,
 .formulario {
     scroll-snap-align: center;
     scroll-snap-stop: always;
-}
+}*/
 
 *, *:before, *:after {
     box-sizing: inherit;
@@ -54,6 +55,91 @@ body {
 .boton:hover {
     cursor: pointer;
 }
+
+
+/* prueba de boton*/
+
+/*** ESTILOS BOTÓN SLIDE CLOSE ***/
+.ov-btn-slide-close {
+    background: var(--blanco); /* color de fondo */
+    color: var(--secundario); /* color de fuente */
+    border: 2px solid var(--secundario); /* tamaño y color de borde */
+    padding: 16px 20px;
+    border-radius: 6px; /* redondear bordes */
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: inline-block;
+  }
+  .ov-btn-slide-close:before, .ov-btn-slide-close:after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: -50%;
+    background-color:var(--secundario); /* color de fondo hover */
+    -webkit-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
+  .ov-btn-slide-close:after {
+    left: 100%;
+  }
+  .ov-btn-slide-close:hover {
+    color: #fff; /* color de fuente hover */
+  }
+  .ov-btn-slide-close:hover:before {
+    left: 0;
+  }
+  .ov-btn-slide-close:hover:after {
+    left: 50%;
+  }
+
+/* cierre de boton*/
+
+/*efecto navegacion*/
+
+/*inicio boton*/
+.ov-btn-slide-close-nav {
+    background: var(--secundario); /* color de fondo */
+    color: var(--secundario); /* color de fuente */
+    border: 2px solid var(--secundario); /* tamaño y color de borde */
+    padding: 16px 20px;
+    border-radius: 6px; /* redondear bordes */
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: inline-block;
+  }
+  .ov-btn-slide-close-nav:before, .ov-btn-slide-close:after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: -50%;
+    background-color:var(--secundario); /* color de fondo hover */
+    -webkit-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
+  .ov-btn-slide-close-nav:after {
+    left: 100%;
+  }
+  .ov-btn-slide-close-nav:hover {
+    color: #fff; /* color de fuente hover */
+  }
+  .ov-btn-slide-close-nav:hover:before {
+    left: 0;
+  }
+  .ov-btn-slide-close-nav:hover:after {
+    left: 50%;
+  }
+
+/*cierre boton*/
 
 .sombra {
     box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
@@ -99,12 +185,17 @@ h1,h2,h3 {
 }
 
 /* Navegacion Principal */
+
+
 .nav-bg {
     background-color: var(--secundario);
+    position: relative;
 }
 .navegacion-principal {
     display: flex;
     flex-direction: column;
+    position: relative;
+    
 }
 @media (min-width: 768px) {
     .navegacion-principal {
@@ -120,21 +211,26 @@ h1,h2,h3 {
     text-decoration: none;
     font-size: 2rem;
     font-weight: 700;
-    padding: 1rem;
+    padding: 1.1rem;
+    
 }
+/*
 .navegacion-principal a:hover {
     background-color: var(--primario);
     color: var(--oscuro);
-}
+    text-shadow: 0px 0px 5px var(--blanco);
+}*/
 
 /* Hero */
 .hero {
-    background-image: url(../img/hero.jpg);
+    background-image: url(/diseño-web-hero.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     height: 450px;
     position: relative;
     margin-bottom: 2rem;
+    
 }
 .contenido-hero {
     position: absolute;
@@ -175,13 +271,14 @@ h1,h2,h3 {
     align-items: center;
 }
 .servicio h3 {
-    color: var(--secundario);
-    font-weight: normal;
+    color: var(--primario);
+    font-weight: 700;
 }
 .servicio p {
     line-height: 2;
     text-align: center;
 }
+
 .servicio .iconos {
     height: 15rem;
     width: 15rem;
@@ -192,6 +289,13 @@ h1,h2,h3 {
     align-items: center;
 }
 
+.servicio .iconos:hover{
+    box-shadow: 0px 0px 7px 3px rgba(229, 229, 229, 0.341);
+    -webkit-box-shadow: 0px 0px 7px 3px rgba(229, 225, 225, 0.341);
+    -moz-box-shadow: 0px 0px 7px 3px rgba(238, 233, 233, 0.343); 
+
+}
+
 /** Contacto **/
 .formulario {
     background-color: var(--gris);
@@ -199,6 +303,10 @@ h1,h2,h3 {
     margin: 0 auto;
     padding: 2rem;
     border-radius: 1rem;
+    box-shadow: 1px 16px 17px -10px rgba(0,0,0,0.77);
+    -webkit-box-shadow: 1px 16px 17px -10px rgba(0,0,0,0.77);
+    -moz-box-shadow: 1px 16px 17px -10px rgba(0,0,0,0.77);
+    margin-bottom: 3rem;
 }
 
 .formulario fieldset {
@@ -210,7 +318,7 @@ h1,h2,h3 {
     text-transform: uppercase;
     font-weight: 700;
     margin-bottom: 2rem;
-    color: var(--primario);
+    color: var(--secundario);
 }
 
 @media (min-width: 768px) {
@@ -242,7 +350,7 @@ h1,h2,h3 {
 .input-text {
     width: 100%;
     border: none;
-    padding: 1.5rem;
+    padding:1.5rem;
     border-radius: .5rem;
 }
 
@@ -250,3 +358,9 @@ h1,h2,h3 {
 .footer {
     text-align: center;
 }
+.footer span{
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+
